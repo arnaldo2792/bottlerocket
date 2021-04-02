@@ -4,6 +4,56 @@ Description=ACPI event daemon
 [Service]
 Type=forking
 ExecStart=/usr/sbin/acpid -c /usr/lib/acpid/events
+# No privileges are required for the process
+CapabilityBoundingSet=
+# Allow access to the input char device
+DeviceAllow=char-input rw
+# Don't allow access from any IP address in any socket created by the process
+IPAddressDeny=any
+# Lock down the personality syscall
+LockPersonality=true
+# Block attempts to create memory mappings
+MemoryDenyWriteExecute=true
+# Don't allow the process to get more privileges
+NoNewPrivileges=true
+# Use a different mount namespace for the process
+PrivateMounts=true
+# Use a private /tmp and /var/tmp filesystems
+PrivateTmp=true
+# Deny writes to the hardware clock
+ProtectClock=true
+# Mark control groups as read-only
+ProtectControlGroups=true
+# Hide /home, /root and /run/user
+ProtectHome=true
+# Create a new UTS namespace to prevent changing the hostname
+ProtectHostname=true
+# Deny access to the kernel log ring bufffer
+ProtectKernelLogs=true
+# Block kernel module loading
+ProtectKernelModules=true
+# Mark kernel variables (/sys, /proc/sys, etc) as read-only
+ProtectKernelTunables=true
+# Block access to /proc metadata
+ProtectProc=noaccess
+# Mounts filesystems as read-only, which already are
+ProtectSystem=true
+# Mark as invisible files and directories in /proc not related with process management
+ProcSubset=pid
+# Allow access to these socket families
+RestrictAddressFamilies=AF_UNIX AF_NETLINK
+# Don't allow access to any namespace with syscalls: unshare, clone, setns
+RestrictNamespaces=true
+# Block attempts to enable realtime scheduling
+RestrictRealtime=true
+# Block attempts to set uid/gid in files or directories
+RestrictSUIDSGID=true
+# Only allow syscalls for the host's architecture
+SystemCallArchitectures=native
+# Grant only the required groups of syscalls
+SystemCallFilter=@basic-io @file-system @io-event @network-io @signal @system-service
+# File mode creation mask
+UMask=0077
 
 [Install]
 WantedBy=preconfigured.target
