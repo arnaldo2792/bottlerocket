@@ -121,6 +121,34 @@ licenses = [
 ]
 ```
 
+#### NVIDIA variants
+
+If you want to build the `aws-k8s-1.21-nvidia` variant, you can follow these steps to prepare a `Licenses.toml` file using the [License for customer use of NVIDIA software](https://www.nvidia.com/en-us/drivers/nvidia-license/):
+
+1. Fetch the drivers `.run` archive from the URL provided in the [kmod-5.10-nvidia package](packages/kmod-5.10-nvidia/Cargo.toml), i. e.:
+
+```shell
+curl -LO https://us.download.nvidia.com/tesla/470.82.01/NVIDIA-Linux-x86_64-470.82.01.run
+```
+
+2. Extract the sources and copy the `LICENSE` file to the `licenses` directory in your Bottlerocket root directory:
+
+```shell
+BOTTLEROCKET_ROOT_DIRECTORY=<> # Set this to your bottlerocket directory
+chmod +x NVIDIA-Linux-x86_64-470.82.01.run && ./NVIDIA-Linux-x86_64-470.82.01.run -x
+cp NVIDIA-Linux-x86_64-470.82.01/LICENSE $BOTTLEROCKET_ROOT_DIRECTORY/licenses
+```
+
+3. Create a `Licenses.toml` file in your Bottlerocket root directory, with the following content:
+
+```toml
+[nvidia]
+spdx-id = "LicensesRef-NVIDIA-Customer-Use"
+licenses = [
+  { path = "LICENSE" }
+]
+```
+
 ### Register an AMI
 
 To use the image in Amazon EC2, we need to register the image as an AMI.

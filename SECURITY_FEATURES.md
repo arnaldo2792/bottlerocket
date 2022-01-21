@@ -134,6 +134,8 @@ All binaries are linked with the following options:
 
 Together these enable [full RELRO support](https://www.redhat.com/en/blog/hardening-elf-binaries-using-relocation-read-only-relro) which makes [ROP](https://en.wikipedia.org/wiki/Return-oriented_programming) attacks more difficult to execute.
 
+**Note:** the `aws-k8s-1.21-nvidia` variant includes the NVIDIA k8s device plugin which is compiled without the `-wl,-z,now` flags, and other precompiled NVIDIA libraries that could haven't been compiled with hardening flags.
+
 ### SELinux enabled in enforcing mode
 
 Bottlerocket enables SELinux by default, sets it to enforcing mode, and loads the policy during boot.

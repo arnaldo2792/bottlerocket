@@ -158,11 +158,11 @@ aws ssm get-parameters --region us-west-2 \
 
 ### Cluster setup
 
-*Note:* most commands will have a region argument; make sure to change it if you don't want to set up in us-west-2. 
-Also be aware that when operating in GovCloud the IAM ARNs will need to be updated to the following: `arn:aws-us-gov`.   
-For example:  
- `arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy`   
- will be updated to:  
+*Note:* most commands will have a region argument; make sure to change it if you don't want to set up in us-west-2.
+Also be aware that when operating in GovCloud the IAM ARNs will need to be updated to the following: `arn:aws-us-gov`.
+For example:
+ `arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy`
+ will be updated to:
  `arn:aws-us-gov:iam::aws:policy/AmazonEKSWorkerNodePolicy`.
 
 You can set up a new cluster like this:
@@ -369,3 +369,12 @@ Once it launches, you should be able to run pods on your Bottlerocket instance u
 
 For example, to run busybox:
 `kubectl run -i -t busybox --image=busybox --restart=Never`
+
+### aws-k8s-1.21-nvidia variant
+
+The `aws-k8s-1.21-nvidia` variant includes the required packages and configurations to leverage NVIDIA GPUs.
+It comes with the [NVIDIA Tesla driver](https://docs.nvidia.com/datacenter/tesla/drivers/index.html) along with the libraries required by the [CUDA toolkit](https://developer.nvidia.com/cuda-toolkit) included in your orchestrated containers.
+It also includes the [NVIDIA k8s device plugin](https://github.com/NVIDIA/k8s-device-plugin), so please make sure you don't have a daemonset running the device plugin in your cluster before launching a new node using this variant.
+
+With this variant, most of the existing NVIDIA tools (like [DCGM](https://github.com/NVIDIA/dcgm-exporter) and the [GPU Feature Discovery](https://github.com/NVIDIA/gpu-feature-discovery)) work as you would expect, you can install them in your cluster following the instructions provided for each project.
+We recommend installing these tools individually via `helm install` instead of using the [GPU Operator](https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/getting-started.html#install-nvidia-gpu-operator), because, even though it works for this variant, it could break on upgrades.
