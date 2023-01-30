@@ -3837,9 +3837,9 @@ checksum = "8ccb82d61f80a663efe1f787a51b16b5a51e3314d6ac365b08639f52387b33f3"
 
 [[package]]
 name = "unindent"
-version = "0.1.8"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "514672a55d7380da379785a4d70ca8386c8883ff7eaae877be4d2081cebe73d8"
+checksum = "c07e1a842213202c2c73ae4c43761d1e3343c1bf74eb05c3a0a5e6f5847b9313"
 
 [[package]]
 name = "untrusted"
