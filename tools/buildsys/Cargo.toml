@@ -9,7 +9,7 @@ publish = false
 exclude = ["README.md"]
 
 [dependencies]
-duct = "0.13.0"
+duct = "0.13.6"
 hex = "0.4.0"
 lazy_static = "1.4"
 rand = { version = "0.8", default-features = false, features = ["std", "std_rng"] }
