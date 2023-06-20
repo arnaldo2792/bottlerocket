@@ -34,7 +34,7 @@ tokio = { version = "~1.14", default-features = false, features = ["fs", "io-std
 tokio-tungstenite = { version = "0.16", default-features = false, features = ["connect"] }
 toml = "0.5"
 unindent = "0.1"
-url = "2.2.1"
+url = "2.3.0"
 
 [build-dependencies]
 cargo-readme = "3.1"

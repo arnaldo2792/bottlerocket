@@ -26,7 +26,7 @@ toml = "0.5.1"
 tough = { version = "0.12", features = ["http"] }
 update_metadata = { path = "../update_metadata", version = "0.1.0" }
 structopt = "0.3"
-url = "2.1.0"
+url = "2.3.0"
 signal-hook = "0.3"
 models = { path = "../../models", version = "0.1.0" }
 

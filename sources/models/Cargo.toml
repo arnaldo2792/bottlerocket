@@ -22,7 +22,7 @@ serde_plain = "1.0"
 snafu = "0.7"
 toml = "0.5"
 x509-parser = "0.13"
-url = "2.1"
+url = "2.3"
 
 [build-dependencies]
 cargo-readme = "3.1"
