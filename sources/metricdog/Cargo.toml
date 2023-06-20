@@ -17,7 +17,7 @@ simplelog = "0.11"
 snafu = { version = "0.7" }
 structopt = "0.3.17"
 toml = "0.5.1"
-url = "2.1.1"
+url = "2.3.0"
 
 [build-dependencies]
 cargo-readme = "3.1"
