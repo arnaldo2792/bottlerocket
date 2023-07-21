@@ -10,7 +10,7 @@ build = "build.rs"
 exclude = ["README.md"]
 
 [dependencies]
-base64 = "0.13"
+base64 = "0.21"
 bottlerocket-release = { path = "../bottlerocket-release", version = "0.1.0" }
 lazy_static = "1.2"
 libc = "0.2"

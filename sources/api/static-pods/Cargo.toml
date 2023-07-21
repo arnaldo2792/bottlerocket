@@ -11,7 +11,7 @@ exclude = ["README.md"]
 
 [dependencies]
 constants = { path = "../../constants", version = "0.1.0" }
-base64 = "0.13"
+base64 = "0.21"
 log = "0.4"
 models = { path = "../../models", version = "0.1.0" }
 schnauzer = { path = "../schnauzer", version = "0.1.0" }

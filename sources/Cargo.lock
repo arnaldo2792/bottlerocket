@@ -54,7 +54,7 @@ dependencies = [
  "actix-service",
  "actix-utils",
  "ahash",
- "base64",
+ "base64 0.13.1",
  "bitflags",
  "bytes",
  "bytestring",
@@ -507,9 +507,15 @@ dependencies = [
 
 [[package]]
 name = "base64"
-version = "0.13.0"
+version = "0.13.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "904dfeac50f3cdaba28fc6f57fdcddb75f49ed61346676a78c4ffe55877802fd"
+checksum = "9e1b586273c5702936fe7b7d6896644d8be71e6314cfe09d3167c95f712589e8"
+
+[[package]]
+name = "base64"
+version = "0.21.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "604178f6c5c21f02dc555784810edfb88d34ac2c73b2eae109655649ee73ce3d"
 
 [[package]]
 name = "bincode"
@@ -583,7 +589,7 @@ name = "bootstrap-containers"
 version = "0.1.0"
 dependencies = [
  "apiclient",
- "base64",
+ "base64 0.21.2",
  "cargo-readme",
  "constants",
  "datastore",
@@ -688,7 +694,7 @@ version = "0.1.0"
 dependencies = [
  "apiclient",
  "argh",
- "base64",
+ "base64 0.21.2",
  "cargo-readme",
  "constants",
  "http",
@@ -1106,7 +1112,7 @@ version = "0.1.0"
 dependencies = [
  "apiclient",
  "async-trait",
- "base64",
+ "base64 0.21.2",
  "cargo-readme",
  "constants",
  "flate2",
@@ -1530,7 +1536,7 @@ name = "host-containers"
 version = "0.1.0"
 dependencies = [
  "apiclient",
- "base64",
+ "base64 0.21.2",
  "cargo-readme",
  "constants",
  "http",
@@ -2051,7 +2057,7 @@ dependencies = [
 name = "models"
 version = "0.1.0"
 dependencies = [
- "base64",
+ "base64 0.21.2",
  "bottlerocket-release",
  "cargo-readme",
  "filetime",
@@ -2379,7 +2385,7 @@ version = "1.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e9a3b09a20e374558580a4914d3b7d89bd61b954a5a5e1dcbea98753addb1947"
 dependencies = [
- "base64",
+ "base64 0.13.1",
 ]
 
 [[package]]
@@ -2679,7 +2685,7 @@ version = "0.11.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "46a1f7aa4f35e5e8b4160449f51afc758f0ce6454315a9fa7d0d113e958c41eb"
 dependencies = [
- "base64",
+ "base64 0.13.1",
  "bytes",
  "encoding_rs",
  "futures-core",
@@ -2754,7 +2760,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5b4f000e8934c1b4f70adde180056812e7ea6b1a247952db8ee98c94cd3116cc"
 dependencies = [
  "async-trait",
- "base64",
+ "base64 0.13.1",
  "bytes",
  "crc32fast",
  "futures",
@@ -2811,7 +2817,7 @@ version = "0.47.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6264e93384b90a747758bcc82079711eacf2e755c3a8b5091687b5349d870bcc"
 dependencies = [
- "base64",
+ "base64 0.13.1",
  "bytes",
  "chrono",
  "digest 0.9.0",
@@ -2861,7 +2867,7 @@ version = "0.19.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "35edb675feee39aec9c99fa5ff985081995a06d594114ae14cbe797ad7b7a6d7"
 dependencies = [
- "base64",
+ "base64 0.13.1",
  "log",
  "ring",
  "sct 0.6.1",
@@ -2898,7 +2904,7 @@ version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1ee86d63972a7c661d1536fefe8c3c8407321c3df668891286de28abcd087360"
 dependencies = [
- "base64",
+ "base64 0.13.1",
 ]
 
 [[package]]
@@ -2931,7 +2937,7 @@ name = "schnauzer"
 version = "0.1.0"
 dependencies = [
  "apiclient",
- "base64",
+ "base64 0.21.2",
  "bottlerocket-release",
  "cargo-readme",
  "constants",
@@ -3165,7 +3171,7 @@ checksum = "24188a676b6ae68c3b2cb3a01be17fbf7240ce009799bb56d5b1409051e78fde"
 name = "shibaken"
 version = "0.1.0"
 dependencies = [
- "base64",
+ "base64 0.21.2",
  "cargo-readme",
  "imdsclient",
  "log",
@@ -3293,7 +3299,7 @@ checksum = "6e63cff320ae2c57904679ba7cb63280a3dc4613885beafb148ee7bf9aa9042d"
 name = "static-pods"
 version = "0.1.0"
 dependencies = [
- "base64",
+ "base64 0.21.2",
  "cargo-readme",
  "constants",
  "log",
@@ -3777,7 +3783,7 @@ version = "0.16.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6ad3713a14ae247f22a728a0456a545df14acf3867f905adff84be99e23b3ad1"
 dependencies = [
- "base64",
+ "base64 0.13.1",
  "byteorder",
  "bytes",
  "http",
@@ -4121,7 +4127,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e64bcfe6a33d9a2d5451de520881469863bd05a095f6b6f7f2ad1a5cd8d4ea2f"
 dependencies = [
  "asn1-rs",
- "base64",
+ "base64 0.13.1",
  "data-encoding",
  "der-parser",
  "lazy_static",
