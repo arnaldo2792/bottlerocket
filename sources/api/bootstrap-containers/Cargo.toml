@@ -13,7 +13,7 @@ exclude = ["README.md"]
 apiclient = { path = "../apiclient", version = "0.1.0" }
 constants = { path = "../../constants", version = "0.1.0" }
 datastore = { path = "../datastore", version = "0.1.0" }
-base64 = "0.13"
+base64 = "0.21"
 http = "0.2"
 log = "0.4"
 models = { path = "../../models", version = "0.1.0" }
