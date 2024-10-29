@@ -1,8 +1,11 @@
 schema-version = 1
-release-version = "1.26.1"
+release-version = "1.27.0"
 
 [vendor.bottlerocket]
 registry = "public.ecr.aws/bottlerocket"
+
+[vendor.agarrcia]
+registry = "public.ecr.aws/bottlerocket-agarrcia"
 
 [sdk]
 name = "bottlerocket-sdk"
@@ -12,4 +15,4 @@ vendor = "bottlerocket"
 [[kit]]
 name = "bottlerocket-core-kit"
 version = "3.1.1"
-vendor = "bottlerocket"
+vendor = "agarrcia"
