@@ -20,6 +20,8 @@ members = [
     "settings-defaults/aws-ecs-3-nvidia",
     "settings-defaults/aws-ecs-4",
     "settings-defaults/aws-ecs-4-nvidia",
+    "settings-defaults/aws-ecs-5",
+    "settings-defaults/aws-ecs-5-nvidia",
     "settings-defaults/aws-k8s-1.31",
     "settings-defaults/aws-k8s-1.31-nvidia",
     "settings-defaults/aws-k8s-1.32",
@@ -72,6 +74,7 @@ members = [
     "settings-plugins/aws-ecs-2",
     "settings-plugins/aws-ecs-3",
     "settings-plugins/aws-ecs-4",
+    "settings-plugins/aws-ecs-5",
     "settings-plugins/aws-k8s",
     "settings-plugins/aws-k8s-nvidia",
     "settings-plugins/metal-dev",
@@ -135,27 +138,27 @@ walkdir = "2"
 
 [workspace.dependencies.bottlerocket-defaults-helper]
 git = "https://github.com/bottlerocket-os/bottlerocket-settings-sdk"
-tag = "bottlerocket-settings-models-v0.25.0"
+rev = "4a98231bf64792f42aa3a1360c3fe76ade37d599"
 version = "0.1.1"
 
 [workspace.dependencies.bottlerocket-modeled-types]
 git = "https://github.com/bottlerocket-os/bottlerocket-settings-sdk"
-tag = "bottlerocket-settings-models-v0.25.0"
+rev = "4a98231bf64792f42aa3a1360c3fe76ade37d599"
 version = "0.17.0"
 
 [workspace.dependencies.bottlerocket-settings-models]
 git = "https://github.com/bottlerocket-os/bottlerocket-settings-sdk"
-tag = "bottlerocket-settings-models-v0.25.0"
+rev = "4a98231bf64792f42aa3a1360c3fe76ade37d599"
 version = "0.25.0"
 
 [workspace.dependencies.bottlerocket-settings-plugin]
 git = "https://github.com/bottlerocket-os/bottlerocket-settings-sdk"
-tag = "bottlerocket-settings-models-v0.25.0"
+rev = "4a98231bf64792f42aa3a1360c3fe76ade37d599"
 version = "0.1.0"
 
 [workspace.dependencies.settings-extension-oci-defaults]
 git = "https://github.com/bottlerocket-os/bottlerocket-settings-sdk"
-tag = "bottlerocket-settings-models-v0.25.0"
+rev = "4a98231bf64792f42aa3a1360c3fe76ade37d599"
 version = "0.1.0"
 
 [profile.release]

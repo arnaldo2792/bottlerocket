@@ -85,4 +85,9 @@ allow-git = [
     # We will allow it as an exception until the following is resolved:
     # https://github.com/bottlerocket-os/bottlerocket-settings-sdk/issues/18
     "https://github.com/bottlerocket-os/bottlerocket-settings-sdk",
+    # Local grove-provided SDK rev consumed by the aws-ecs-5* variant build
+    # (see planning/ecs-5-restrict-kernel-boot-settings). Vendored on the host
+    # before the offline container build; allow-listed so cargo-deny's source
+    # check passes if it runs during the build.
+    "file:///home/fedora/Repositories/ai-stuff/bottlerocket-forest/groves/ukis/bottlerocket-settings-sdk",
 ]
