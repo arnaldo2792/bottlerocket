@@ -89,5 +89,5 @@ allow-git = [
     # (see planning/ecs-5-restrict-kernel-boot-settings). Vendored on the host
     # before the offline container build; allow-listed so cargo-deny's source
     # check passes if it runs during the build.
-    "file:///home/fedora/Repositories/ai-stuff/bottlerocket-forest/groves/ukis/bottlerocket-settings-sdk",
+    # "file:///home/fedora/Repositories/ai-stuff/bottlerocket-forest/groves/ukis/bottlerocket-settings-sdk",
 ]

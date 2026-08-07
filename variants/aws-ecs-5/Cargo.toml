@@ -16,9 +16,10 @@ erofs-root-partition = true
 external-kmod-development = false
 encrypted-storage = true
 in-place-updates = false
-ephemeral-encryption-keys = true
+# ephemeral-encryption-keys = true
 
 [package.metadata.build-variant]
+image-format = "uki"
 included-packages = [
 # core
     "release",
@@ -47,6 +48,7 @@ kernel-parameters = [
     "module_blacklist=i8042",
     "SYSTEMD_CGROUP_ENABLE_LEGACY_FORCE=1",
     "SYSTEMD_DEFAULT_MOUNT_RATE_LIMIT_BURST=25",
+    "retain_initrd"
 ]
 
 [lib]

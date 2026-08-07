@@ -13,13 +13,14 @@ systemd-networkd = true
 erofs-root-partition = true
 external-kmod-development = false
 encrypted-storage = true
-ephemeral-encryption-keys = true
+# ephemeral-encryption-keys = true
 in-place-updates = false
 
 [package.metadata.build-variant.image-layout]
 os-image-size-gib = 4
 
 [package.metadata.build-variant]
+image-format = "uki"
 included-packages = [
 # core
     "release",

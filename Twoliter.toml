@@ -3,13 +3,10 @@ release-version = "1.64.0"
 project-vendor = "Bottlerocket"
 
 [vendor.bottlerocket]
-registry = "public.ecr.aws/bottlerocket"
-
-[vendor.piyush]
-registry = "public.ecr.aws/s2v1a1q8"
+registry = "202621603103.dkr.ecr.us-west-2.amazonaws.com"
 
 [vendor.local]
-registry = "localhost:6404"
+registry = "localhost:5384"
 
 [sdk]
 name = "bottlerocket-sdk"
@@ -23,5 +20,5 @@ vendor = "local"
 
 [[kit]]
 name = "bottlerocket-core-kit"
-version = "15.0.0"
+version = "15.0.1"
 vendor = "local"
